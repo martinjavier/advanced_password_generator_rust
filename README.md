@@ -1,11 +1,11 @@
-# Advanced Password Generator (adg)
+# Advanced Password Generator (apg)
 
 Command-line password generator written in Rust.
 
 ## Usage
 
 ```
-adg <length> [groups] [-c <n>]
+apg <length> [groups] [-c <n>]
 ```
 
 | Group | Characters |
@@ -25,18 +25,18 @@ adg <length> [groups] [-c <n>]
 ## Examples
 
 ```
-adg 128 all
-adg 16 ULNS
-adg 64 NS
-adg 32 S
-adg 20 -c 5
+apg 128 all
+apg 16 ULNS
+apg 64 NS
+apg 32 S
+apg 20 -c 5
 ```
 
 ## Build and install
 
 ```
-cargo build --release      # binary at target/release/adg
-cargo install --path .     # installs 'adg' into ~/.cargo/bin
+cargo build --release      # binary at target/release/apg
+cargo install --path .     # installs 'apg' into ~/.cargo/bin
 cargo test                 # runs the tests
 ```
 

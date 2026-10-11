@@ -1,7 +1,7 @@
 use std::io::{self, BufWriter, Write};
 use std::process::ExitCode;
 
-use adg::{generate, help_text, parse_args, Command};
+use apg::{generate, help_text, parse_args, Command};
 
 fn main() -> ExitCode {
     match parse_args(std::env::args().skip(1)) {
@@ -10,7 +10,7 @@ fn main() -> ExitCode {
             ExitCode::SUCCESS
         }
         Ok(Command::Version) => {
-            println!("adg {}", env!("CARGO_PKG_VERSION"));
+            println!("apg {}", env!("CARGO_PKG_VERSION"));
             ExitCode::SUCCESS
         }
         Ok(Command::Generate(cfg)) => {
@@ -26,7 +26,7 @@ fn main() -> ExitCode {
         }
         Err(msg) => {
             eprintln!("Error: {msg}");
-            eprintln!("Run 'adg --help' for usage.");
+            eprintln!("Run 'apg --help' for usage.");
             ExitCode::from(2)
         }
     }

@@ -3,7 +3,7 @@
 version = 4
 
 [[package]]
-name = "adg"
+name = "apg"
 version = "0.1.0"
 dependencies = [
  "rand",

@@ -1,11 +1,11 @@
 [package]
-name = "adg"
+name = "apg"
 version = "0.1.0"
 edition = "2024"
 description = "Advanced Password Generator - command-line password generator"
 
 [[bin]]
-name = "adg"
+name = "apg"
 path = "src/main.rs"
 
 [dependencies]

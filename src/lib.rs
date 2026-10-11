@@ -1,4 +1,4 @@
-//! Advanced Password Generator (adg)
+//! Advanced Password Generator (apg)
 //!
 //! Argument parsing and password generation logic.
 
@@ -199,10 +199,10 @@ pub fn generate_with<R: Rng + ?Sized>(rng: &mut R, length: usize, groups: &[Grou
 pub fn help_text() -> String {
     format!(
         "\
-Advanced Password Generator (adg) v{version}
+Advanced Password Generator (apg) v{version}
 
 USAGE:
-    adg <length> [groups] [-c <n>]
+    apg <length> [groups] [-c <n>]
 
 ARGUMENTS:
     <length>      Password length ({MIN_LEN}-{MAX_LEN})
@@ -223,12 +223,12 @@ OPTIONS:
 At least one character from each selected group is guaranteed.
 
 EXAMPLES:
-    adg 128 all
-    adg 16 ULNS
-    adg 64 NS
-    adg 32 S
-    adg 20 -c 5
-    adg 12 U L N -c 3",
+    apg 128 all
+    apg 16 ULNS
+    apg 64 NS
+    apg 32 S
+    apg 20 -c 5
+    apg 12 U L N -c 3",
         version = env!("CARGO_PKG_VERSION")
     )
 }
