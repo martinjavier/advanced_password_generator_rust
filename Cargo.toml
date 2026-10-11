@@ -1,0 +1,16 @@
+[package]
+name = "adg"
+version = "0.1.0"
+edition = "2024"
+description = "Advanced Password Generator - command-line password generator"
+
+[[bin]]
+name = "adg"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.8"
+
+[profile.release]
+strip = true
+lto = true
